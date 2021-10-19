@@ -11,7 +11,7 @@
 train -> test -> val 로 진행하며, 최종 val을 통해 result 폴더의 submission.csv로 저장하게 됩니다.
 
 train
-python train.py --dataset <dataset name: qnrf, sha, shb or nwpu> --data-dir <path to dataset> --device <gpu device id>
+python train.py --dataset sha --data-dir <path to dataset> --device <gpu device id>
 
 test
 python test.py --model-path <path of the model to be evaluated> --data-path <directory for the dataset> --dataset sha
