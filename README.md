@@ -6,15 +6,32 @@
 
 링크 주소 : https://www.kaggle.com/tthien/shanghaitech
 
-진행 순서는 다음과 같습니다.
-
+## Process
 train -> test -> val 로 진행하며, 최종 val을 통해 result 폴더의 submission.csv로 저장하게 됩니다.
 
-train
+1. train
+```
 python train.py --dataset sha --data-dir <path to dataset> --device <gpu device id>
+```
 
-test
+2. test
+```
 python test.py --model-path <path of the model to be evaluated> --data-path <directory for the dataset> --dataset sha
-  
-val
+```
+
+3. val
+```
 python val.py --model-path <path of the model to be evaluated>
+```
+
+## References
+If you find this work or code useful, please cite:
+
+```
+@inproceedings{wang2020DMCount,
+  title={Distribution Matching for Crowd Counting},
+  author={Boyu Wang and Huidong Liu and Dimitris Samaras and Minh Hoai},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2020},
+}
+```
