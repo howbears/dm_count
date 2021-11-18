@@ -34,7 +34,7 @@ def run():
     data_path = args.data_path
 
     if args.dataset.lower() == 'sha' or args.dataset.lower() == 'shb':
-        dataset = crowd.Crowd_sh(os.path.join(data_path, 'val_data'), crop_size, 8, method='val')
+        dataset = crowd.Crowd_sh(os.path.join(data_path, 'test_data'), crop_size, 8, method='val')
     else:
         raise NotImplementedError
     dataloader = torch.utils.data.DataLoader(dataset, 1, shuffle=False,
